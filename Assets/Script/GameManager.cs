@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// ƒQ[ƒ€‘S‘Ì‚ÌState‚ğŠÇ—‚µ‚Ü‚·
+/// ã‚²ãƒ¼ãƒ å…¨ä½“ã®Stateã‚’ç®¡ç†ã—ã¾ã™
 /// </summary>
 public class GameManager : MonoBehaviour
 {

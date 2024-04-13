@@ -20,10 +20,10 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             OnEnable();
-            currentView = views[1 - Array.IndexOf(views, currentView)]; // 2�̎��_��؂�ւ���
+            currentView = views[1 - Array.IndexOf(views, currentView)]; // 2つの視点を切り替える
         }
 
-        // �X���[�Y�Ɏ��_��؂�ւ���
+        // スムーズに視点を切り替える
         transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * transitionSpeed);
         Vector3 currentAngle = new Vector3(
             Mathf.LerpAngle(transform.rotation.eulerAngles.x, currentView.rotation.eulerAngles.x, Time.deltaTime * transitionSpeed),

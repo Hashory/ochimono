@@ -8,22 +8,22 @@ using Random = UnityEngine.Random;
 public class RainSpawner : MonoBehaviour
 {
     /// <summary>
-    /// ƒXƒ|[ƒ“‚³‚¹‚½‚¢ƒIƒuƒWƒFƒNƒg‚ÌƒvƒŒƒtƒ@ƒu
+    /// ã‚¹ãƒãƒ¼ãƒ³ã•ã›ãŸã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ—ãƒ¬ãƒ•ã‚¡ãƒ–
     /// </summary>
     [SerializeField] private GameObject objectToSpawn;
 
     /// <summary>
-    /// ƒXƒ|[ƒ“ƒGƒŠƒA‚Ì”¼Œa
+    /// ã‚¹ãƒãƒ¼ãƒ³ã‚¨ãƒªã‚¢ã®åŠå¾„
     /// </summary>
     public float radius = 5f;
 
     /// <summary>
-    /// ƒXƒ|[ƒ“ƒGƒŠƒA‚Ì‚‚³
+    /// ã‚¹ãƒãƒ¼ãƒ³ã‚¨ãƒªã‚¢ã®é«˜ã•
     /// <summary>
     public float height = 5f;
 
     /// <summary>
-    /// ƒXƒ|[ƒ“ƒGƒŠƒA‚Ì’†S
+    /// ã‚¹ãƒãƒ¼ãƒ³ã‚¨ãƒªã‚¢ã®ä¸­å¿ƒ
     /// </summary>
     private Vector3 spawnAreaCenter;
 
@@ -34,7 +34,7 @@ public class RainSpawner : MonoBehaviour
     public Transform PlayerTransform;
 
     /// <summary>
-    /// ƒXƒ|[ƒ“‚Ìó‘Ô
+    /// ã‚¹ãƒãƒ¼ãƒ³ã®çŠ¶æ…‹
     /// </summary>
     private bool _isSpawning = false;
 
@@ -45,18 +45,18 @@ public class RainSpawner : MonoBehaviour
         get => _isSpawning;
         set
         {
-            if (_isSpawning == value) return; // ’l‚ª•Ï‚í‚Á‚Ä‚¢‚È‚¯‚ê‚Î‰½‚à‚µ‚È‚¢
+            if (_isSpawning == value) return; // å€¤ãŒå¤‰ã‚ã£ã¦ã„ãªã‘ã‚Œã°ä½•ã‚‚ã—ãªã„
 
             _isSpawning = value;
             if (_isSpawning)
             {
                 _parentObject = new GameObject("SpawnedObjects");
-                StartCoroutine(SpawnRoutine()); // ƒXƒ|[ƒ“ŠJn
+                StartCoroutine(SpawnRoutine()); // ã‚¹ãƒãƒ¼ãƒ³é–‹å§‹
             }
             else
             {
-                StopAllCoroutines(); // ‚·‚×‚Ä‚ÌCoroutine‚ğ’â~
-                Destroy(_parentObject); // ¶¬‚µ‚½ƒIƒuƒWƒFƒNƒg‚ğíœ
+                StopAllCoroutines(); // ã™ã¹ã¦ã®Coroutineã‚’åœæ­¢
+                Destroy(_parentObject); // ç”Ÿæˆã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤
             }
         }
     }
@@ -78,7 +78,7 @@ public class RainSpawner : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒIƒuƒWƒFƒNƒg‚ğw’è‚³‚ê‚½ƒGƒŠƒA“à‚Éƒ‰ƒ“ƒ_ƒ€‚É”­¶‚³‚¹‚é
+    /// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã•ã‚ŒãŸã‚¨ãƒªã‚¢å†…ã«ãƒ©ãƒ³ãƒ€ãƒ ã«ç™ºç”Ÿã•ã›ã‚‹
     /// </summary>
     private void SpawnObject()
     {

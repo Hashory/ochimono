@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class GameSlider : MonoBehaviour
 {
     public Slider timeSlider;
-    public float totalTime = 30f; // ƒQ[ƒW‚ª0‚É‚È‚é‚Ü‚Å‚Ì‘ŠÔ
+    public float totalTime = 30f; // ã‚²ãƒ¼ã‚¸ãŒ0ã«ãªã‚‹ã¾ã§ã®ç·æ™‚é–“
 
     private float timeRemaining;
 
@@ -27,7 +27,7 @@ public class GameSlider : MonoBehaviour
         }
         else
         {
-            // ‚±‚±‚ÉŠÔØ‚ê‚Ìˆ—‚ğ‹Lq
+            // ã“ã“ã«æ™‚é–“åˆ‡ã‚Œæ™‚ã®å‡¦ç†ã‚’è¨˜è¿°
             Debug.Log("Time's up!");
         }
     }

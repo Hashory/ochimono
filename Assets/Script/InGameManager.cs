@@ -26,7 +26,7 @@ public class InGameManager : MonoBehaviour
     [SerializeField] private GameObject Spowner;
 
     /// <summary>
-    /// ƒQ[ƒ€‚ÌƒtƒF[ƒY‚ÌƒtƒF[ƒY
+    /// ã‚²ãƒ¼ãƒ ã®ãƒ•ã‚§ãƒ¼ã‚ºã®ãƒ•ã‚§ãƒ¼ã‚º
     /// </summary>
     private int phase = 1;
 
@@ -61,7 +61,7 @@ public class InGameManager : MonoBehaviour
         firstPersonCamera.FirstPersonCameraEnabled(enabled);
         playerMovement.PlayerMovementEnabled(enabled);
 
-        // ƒQ[ƒ€‚ªŠJn‚³‚ê‚½‚çAÅ‰‚Ìó‘Ô‚ğİ’è‚µ‚Ü‚·
+        // ã‚²ãƒ¼ãƒ ãŒé–‹å§‹ã•ã‚ŒãŸã‚‰ã€æœ€åˆã®çŠ¶æ…‹ã‚’è¨­å®šã—ã¾ã™
         if(enabled)
         {
             inGameState = InGameState.startIn;
